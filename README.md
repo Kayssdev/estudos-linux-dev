@@ -4,7 +4,9 @@
 
 ### `pwd`
 - **O comando pwd pode ser utilizado para mostrar o caminho da pasta atual**
-Exemplo -> `$pwd` -> resultado -> `/home/user`
-Observo que com o comando pwd é interessante utilizá-lo quando por exemplo não se sabe em qual caminho ou pasta está no momento. Ou logo após utilizar o comando `clear`
+
+Exemplo -> `$pwd` -> resultado -> `/home/user/downloads`
+
+O comando pwd é útil para confirmar em qual pasta o usuário está antes de executar outros comandos.
 
 ### `ls -la`
