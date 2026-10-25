@@ -88,7 +88,7 @@ pode-se apagar também vários arquivos simultaneamente da seguinte forma:
 
 imagine que há um arquivo.txt, que em seu conteúdo está escrito "linux é divertido". E portanto deseja ver o que há dentro desse arquivo por meio do terminal. Então pode-se utilizar do comando cat para extrair o conteúdo dentro deste arquivo:
 
--> `cat arquivo.txt` saída esperada no terminal -> linux é divertido
+-> `cat arquivo.txt` saída esperada no terminal -> `linux é divertido`
 
 Além disso é possível juntá-lo com diversos arquivos simultaneamente desta forma:
 
