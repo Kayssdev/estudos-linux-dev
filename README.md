@@ -54,3 +54,43 @@ Para copiar diretórios completos utiliza-se de uma incrementação no comando q
 ou até mesmo de forma mais simples, estando no caminho da pasta desejada pode escrever o seguinte comando para copiar para o caminho desejado:
 
 -> `cp -r Documents ../Downloads`
+
+### `mv`
+-**"mv" como propriamente o nome "move" diz, move arquivos e diretorios**
+
+Seu formato é bem simples, da seguinte forma:
+
+`mv origem destino`
+
+Arquivo por exemplo se encontra em documents, com o comando abaixo pode-se movê-lo para downloads
+
+`mv arquivo.txt ../Downloads`
+
+o comando `mv` pode ser utilizado para renomear arquivos também!
+
+Basta apenas colocar a origem(arquivo ou diretório) e logo na frente o nome desejado, segue exemplo:
+
+`mv arquivo.txt aprendendo-linux.txt`
+
+### `rm`
+-**rm significando remove, pode ser utilizado para remover arquivos, há também sua variante rmdir, anteriormente falamos sobre "dir" significando directory. Logo "rmdir" atua na exclusão de diretórios**
+
+formatos padrões -> `rm arquivo.txt`-> `rmdir diretorio`
+
+pode-se apagar também vários arquivos simultaneamente da seguinte forma:
+
+-> `rm arquivo1.txt arquivo2.txt arquivo3.txt` ou acaso os arquivos iniciem com o mesmo nome é possível apagá-los utilizando "*", que corresponde a qualquer sequência de caracteres no nome de arquivos ou diretórios, segue exemplo:
+
+-> arquivos desejados para apagar -> arquivo{1..3}.txt -> utiliza-se dessa forma -> `rm arquivo*` assim será apagado todos os arquivos que tenham o mesmo inicio.
+
+### `cat`
+-**cat é um comando que pode ser utilizado para juntar arquivos e exibir o seu resultado, ou apenas mostrar o que há dentro de um arquivo em específico.**
+
+imagine que há um arquivo.txt, que em seu conteúdo está escrito "linux é divertido". E portanto deseja ver o que há dentro desse arquivo por meio do terminal. Então pode-se utilizar do comando cat para extrair o conteúdo dentro deste arquivo:
+
+-> `cat arquivo.txt` saída esperada no terminal -> linux é divertido
+
+Além disso é possível juntá-lo com diversos arquivos simultaneamente desta forma:
+
+-> `cat arquivo{1..4}.txt` e assim a saída no terminal será todo o conteúdo em cada arquivo!
+
