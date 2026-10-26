@@ -5,7 +5,7 @@
 ### `pwd`
 - **O comando pwd pode ser utilizado para mostrar o caminho da pasta atual**
 
-Exemplo -> `$pwd` -> resultado -> `/home/user/downloads`
+Exemplo -> `pwd` -> resultado -> `/home/user/downloads`
 
 O comando pwd é útil para confirmar em qual pasta o usuário está antes de executar outros comandos.
 
@@ -18,7 +18,7 @@ O "l" logo antes do "a" lista os arquivos ou pasta com detalhes mostrando suas p
 
 `drwxr-xr-x. 1 user user 38 oct 24 10:33 Desktop` <- Arquivo não-oculto
 
-`drwxr-xr-1. 1 user user 442 oct 24 14:39 .config` <- Arquivo oculto definidos geralmente por "."
+`drwxr-xr-x. 1 user user 442 oct 24 14:39 .config` <- Arquivo oculto definidos geralmente por "."
 
 ### `cd`
 -**cd é um comando básico de navegação entre pastas**
@@ -49,7 +49,7 @@ Exemplo:
 
 Para copiar diretórios completos utiliza-se de uma incrementação no comando que seria o `-r` significando "recursivo" faz o cp entrar na pasta e copiar tudo que está dentro dela incluindo suas subpastas, exemplo:
 
--> `cp -r home/user/Documents home/user/Downloads` 
+-> `cp -r /home/user/Documents /home/user/Downloads` 
 
 ou até mesmo de forma mais simples, estando no caminho da pasta desejada pode escrever o seguinte comando para copiar para o caminho desejado:
 
@@ -73,7 +73,7 @@ Basta apenas colocar a origem(arquivo ou diretório) e logo na frente o nome des
 `mv arquivo.txt aprendendo-linux.txt`
 
 ### `rm`
--**rm significando remove, pode ser utilizado para remover arquivos, há também sua variante rmdir, anteriormente falamos sobre "dir" significando directory. Logo "rmdir" atua na exclusão de diretórios**
+-**rm significando remove, pode ser utilizado para remover arquivos, há também sua variante rmdir, anteriormente falamos sobre "dir" significando directory. Logo "rmdir" atua na exclusão de diretórios vázios**
 
 formatos padrões -> `rm arquivo.txt`-> `rmdir diretorio`
 
@@ -103,5 +103,25 @@ Além disso é possível juntá-lo com diversos arquivos simultaneamente desta f
 
 Exemplo:
 
--> `sudo apt install nodejs`
+(Depende da distro que está utilizando, neste exemplo usei fedora)
+-> `sudo dnf install nodejs`
+
+### `chmod`
+-**Com o chmod(Change Mode), você pode alterar e revogar permissões de arquivos e diretórios no Linux. As permissões em si controlam o que cada tipo de usuário(dono, grupo e outros) podem fazer com determinado arquivo ou diretório, sendo ler, escrever ou executá-lo**
+
+No linux, cada arquivo ou diretório tem três tipos de permissões para as três categorias de usuário que são
+
+1. Usuário(Owner): Proprietário do arquivo
+
+2. Grupo(group): Grupo de usuários que aquele arquivo pertence
+
+3. Outros(Others): Todos os outros usuários
+
+- As permissões são representadas por três letras
+
+r: Permissão para Ler(read)
+
+w: Permissão para Escrever(Write)
+
+x: Permissão para Executar(Execute)
 
