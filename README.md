@@ -27,6 +27,18 @@ Pode ser utilizado da seguinte forma conforme o exemplo a seguir:
 
 O usuário quer ir até a pasta downloads pode-se usar o comando ls para listar os diretórios disponíveis -> `Desktop, Downloads, Documents... etc` e decide querer ir até a pasta downloads, utiliza-se então o seguinte comando -> `cd Downloads` -> e logo após utilizar o comando pwd para confirmar que entrou no diretório `pwd` saída do terminal prevista -> `/home/user/Downloads`
 
+Há também seus outros básicos meios de navegação quais são
+
+- cd .. <- sobe um nível para a pasta raiz -> após utilizá-lo De `/home/user/Downloads` vai para `/home/user`
+
+- cd ~ <- vai para sua pasta pessoal (home) -> de qualquer lugar vai para `/home/user`
+
+- cd - <- volta para a pasta onde você estava antes -> alterna entre as duas últimas páginas
+
+- cd / <- Vai para a raiz do sistema -> destino `/`
+
+![ExemploCd](./Imagens/ExemploCd.png)
+
 ### `mkdir`
 -**"make directory" ou como propriamente é sua abreviatura "mkdir" é um comando utilizado para a criação de diretórios ou pasta como preferir!**
 
@@ -108,6 +120,8 @@ Exemplo:
 (Depende da distro que está utilizando, neste exemplo usei fedora)
 -> `sudo dnf install nodejs`
 
+![SudoJS](./Imagens/ExemploSudo.png)
+
 ### `chmod`
 -**Com o chmod(Change Mode), você pode alterar e revogar permissões de arquivos e diretórios no Linux. As permissões em si controlam o que cada tipo de usuário(dono, grupo e outros) podem fazer com determinado arquivo ou diretório, sendo ler, escrever ou executá-lo**
 
@@ -121,9 +135,44 @@ No linux, cada arquivo ou diretório tem três tipos de permissões para as trê
 
 - As permissões são representadas por três letras
 
-r: Permissão para Ler(read)
+r: Permissão para Ler(Read)
 
 w: Permissão para Escrever(Write)
 
 x: Permissão para Executar(Execute)
 
+- Utilizando do comando anterior "ls -l" podemos verificar as permissões do arquivo
+
+![ExemploChmod](./Imagens/ExemploChmod.png)
+
+## O comando chmod pode ser utilizado de duas formas principais: usando a notação simbólica ou a notação númerica, vamos exemplificar os dois exemplos abaixo.
+
+# 1. Notação Simbólica
+
+A notação simbólica utiliza das letras para representar as permissões:
+
+- u: Usuário(owner)
+
+- g: Grupo
+
+- o: Outros
+
+- a: Todos(user, group, others)
+
+Exemplo:
+
+![ExemploChmod2](./Imagens/ExemploChmod2.png)
+
+# 2. Notação Numérica 
+
+Na notação númerica, cada permissão são representada por números
+
+- r = 4
+
+- w = 2
+
+- x = 1
+
+Exemplo:
+
+![Exemplochmod3](./Imagens/ExemploChmod3.png)
