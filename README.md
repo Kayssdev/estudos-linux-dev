@@ -94,3 +94,14 @@ Além disso é possível juntá-lo com diversos arquivos simultaneamente desta f
 
 -> `cat arquivo{1..4}.txt` e assim a saída no terminal será todo o conteúdo em cada arquivo!
 
+## Permissões e Admin
+
+### `sudo`
+-**sudo é um comando que pode ser utilizado para executar comandos com privilégios administrativos**
+
+Útil para situações que exigem privilégios mais altos como para instalação de aplicativos ou até mesmo alterar arquivos do sistema.
+
+Exemplo:
+
+-> `sudo apt install nodejs`
+
