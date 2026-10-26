@@ -27,7 +27,7 @@ Pode ser utilizado da seguinte forma conforme o exemplo a seguir:
 
 O usuário quer ir até a pasta downloads pode-se usar o comando ls para listar os diretórios disponíveis -> `Desktop, Downloads, Documents... etc` e decide querer ir até a pasta downloads, utiliza-se então o seguinte comando -> `cd Downloads` -> e logo após utilizar o comando pwd para confirmar que entrou no diretório `pwd` saída do terminal prevista -> `/home/user/Downloads`
 
-### ´mkdir´
+### `mkdir`
 -**"make directory" ou como propriamente é sua abreviatura "mkdir" é um comando utilizado para a criação de diretórios ou pasta como preferir!**
 
 Exemplos de usos:
