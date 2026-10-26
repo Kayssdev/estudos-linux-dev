@@ -90,7 +90,7 @@ imagine que há um arquivo.txt, que em seu conteúdo está escrito "estudos-linu
 
 -> `cat arquivo.txt` saída esperada no terminal -> `estudos-linux :D`
 
-![alt text](image.png)
+![Exemplo Cat](image.png)
 
 Além disso é possível juntá-lo com diversos arquivos simultaneamente desta forma:
 
