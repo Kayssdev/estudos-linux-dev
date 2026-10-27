@@ -173,13 +173,13 @@ Na notação numérica, cada permissão são representada por um número
 
 - x = 1
 
-4+2+1
+4+2+1 <- Todas as permissões
 
 Exemplo:
 
 ![Exemplochmod3](./Imagens/ExemploChmod3.png)
 
-- ## `chown`
+### `chown`
 **chown -> change owner(Mudar dono) é exatamente como seu significado vem a dizer, com o chown podemos alterar o dono ou o grupo do arquivo ou diretório**
 
 - Sua sintaxe se dá por esse formato:
@@ -190,7 +190,7 @@ Exemplo abaixo:
 
 ![Exemplochown1](./Imagens/Exemplochown1.png)
 
-Como pode observar, utilizei o chown de forma errada para demonstrar que é necessário utilizar esse comando em privilégios elevados, por isso devemos utilizar o sudo no início de nosso comando!
+Como pode observar, utilizei o chown de forma errada para demonstrar que é necessário utilizar esse comando em privilégios elevados, por isso devemos utilizar o sudo no início de' nosso comando!
 
 ![Exemplochown2](./Imagens/Exemplochown2.png)
 
@@ -199,4 +199,17 @@ Na imagem mostro como a alteração dos proprietários funciona, após ser defin
 É possível também singularmente alterar apenas o grupo, colocando um `:` antes do grupo.
 
 ![Exemplochown3](./Imagens/Exemplochown3.png)
+
+# Processos
+
+### `ps aux`
+
+De forma simples o ps aux atua como um gerenciador de tarefas(como no windows) mostra os processos que estão em execução no momento de execução do comando. É um htop porém em versão congelada
+
+`ps` significa process status. O `aux` são três opções juntas que se completam:
+- `a`: processos de todos os usuários
+- `u`: formato detalhado (root, CPU e memória)
+- `x`: inclui processos sem terminal (serviços em segundo plano)
+
+Principais que podemos ver **USER** (dono), **PID** (número do processo), **%CPU**, **%MEM**, **COMMAND** (geralmente o programa).
 
