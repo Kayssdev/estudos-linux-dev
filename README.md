@@ -188,7 +188,7 @@ Exemplo abaixo:
 
 ![Exemplochown1](./Imagens/Exemplochown1.png)
 
-Como pode observar, utilizei o chown de forma errada para demonstrar que é necessário utilizar esse comando em privilégios elevados, por isso devemos utilizar o sudo no ínicio de nosso comando!
+Como pode observar, utilizei o chown de forma errada para demonstrar que é necessário utilizar esse comando em privilégios elevados, por isso devemos utilizar o sudo no início de nosso comando!
 
 ![Exemplochown2](./Imagens/Exemplochown2.png)
 
