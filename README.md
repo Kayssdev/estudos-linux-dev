@@ -14,14 +14,14 @@ O comando pwd é útil para confirmar em qual pasta o usuário está antes de ex
 
 O comando ls -la traz essas informações -> `/permissões/links/usuário/grupos/tamanho do arquivo/data e hora/nome do arquivo`
 
-O "l" logo antes do "a" lista os arquivos ou pasta com detalhes mostrando suas permissões, links, usuários, grupos, tamanho e data do arquivo. E a utilidade do "a" é mostrar até mesmo os diretórios ou arquivos quais estão ocultos no sistema. Após juntar as siglas o terminal entrega uma saída detalhada como essa no exemplo a seguir:
+O "l" logo antes do "a" lista os arquivos ou pasta com detalhes mostrando suas permissões, links, usuários, grupos, tamanho e data do arquivo. E a utilidade do "a" é mostrar até mesmo os diretórios ou arquivos que estão ocultos no sistema. Após juntar as siglas o terminal entrega uma saída detalhada como essa no exemplo a seguir:
 
 `drwxr-xr-x. 1 user user 38 oct 24 10:33 Desktop` <- Arquivo não-oculto
 
 `drwxr-xr-x. 1 user user 442 oct 24 14:39 .config` <- Arquivo oculto definidos geralmente por "."
 
 ### `cd`
--**cd é um comando básico de navegação entre pastas**
+- **cd é um comando básico de navegação entre pastas**
 
 Pode ser utilizado da seguinte forma conforme o exemplo a seguir:
 
@@ -33,23 +33,23 @@ Há também seus outros básicos meios de navegação quais são
 
 - cd ~ <- vai para sua pasta pessoal (home) -> de qualquer lugar vai para `/home/user`
 
-- cd - <- volta para a pasta onde você estava antes -> alterna entre as duas últimas páginas
+- cd - <- volta para a pasta onde você estava antes -> alterna entre as duas últimas pastas
 
 - cd / <- Vai para a raiz do sistema -> destino `/`
 
 ![ExemploCd](./Imagens/ExemploCd.png)
 
 ### `mkdir`
--**"make directory" ou como propriamente é sua abreviatura "mkdir" é um comando utilizado para a criação de diretórios ou pasta como preferir!**
+- **"make directory" ou como propriamente é sua abreviatura "mkdir" é um comando utilizado para a criação de diretórios ou pasta como preferir!**
 
 Exemplos de usos:
 
-Pode-se criar pastas atráves de um caminho específico -> `mkdir /home/user/Documents/estudos-linux` ou até mesmo dentro já dentro de uma pasta em específico -> `mkdir estudos-linux`(Dentro da pasta desejada)
+Pode-se criar pastas através de um caminho específico -> `mkdir /home/user/Documents/estudos-linux` ou até mesmo dentro já dentro de uma pasta em específico -> `mkdir estudos-linux`(Dentro da pasta desejada)
 
 O resultado será criação da pasta desejada, liste ela com o comando "ls" no terminal dentro da pasta ou diretório atual -> `ls` -> `estudos-linux`
 
 ### `cp`
--**"Copy" ou cp, é o comando utilizado para copiar pastas e arquivos**
+- **"Copy" ou cp, é o comando utilizado para copiar pastas e arquivos**
 
 Dado pelo seguinte formato
 
@@ -59,7 +59,7 @@ Exemplo:
 
 -> `cp arquivo.txt /home/user/Downloads/` ou pode criar a cópia na pasta atual com um nome diferente `cp arquivo.txt notas.txt`
 
-Para copiar diretórios completos utiliza-se de uma incrementação no comando que seria o `-r` significando "recursivo" faz o cp entrar na pasta e copiar tudo que está dentro dela incluindo suas subpastas, exemplo:
+Para copiar diretórios completos utiliza-se de uma implementação no comando que seria o `-r` significando "recursivo" faz o cp entrar na pasta e copiar tudo que está dentro dela incluindo suas subpastas, exemplo:
 
 -> `cp -r /home/user/Documents /home/user/Downloads` 
 
@@ -68,7 +68,7 @@ ou até mesmo de forma mais simples, estando no caminho da pasta desejada pode e
 -> `cp -r Documents ../Downloads`
 
 ### `mv`
--**"mv" como propriamente o nome "move" diz, move arquivos e diretorios**
+- **"mv" como propriamente o nome "move" diz, move arquivos e diretorios**
 
 Seu formato é bem simples, da seguinte forma:
 
@@ -85,20 +85,20 @@ Basta apenas colocar a origem(arquivo ou diretório) e logo na frente o nome des
 `mv arquivo.txt aprendendo-linux.txt`
 
 ### `rm`
--**rm significando remove, pode ser utilizado para remover arquivos, há também sua variante rmdir, anteriormente falamos sobre "dir" significando directory. Logo "rmdir" atua na exclusão de diretórios vázios**
+- **rm significando remove, pode ser utilizado para remover arquivos, há também sua variante rmdir, anteriormente falamos sobre "dir" significando directory. Logo "rmdir" atua na exclusão de diretórios vázios**
 
 formatos padrões -> `rm arquivo.txt`-> `rmdir diretorio`
 
 pode-se apagar também vários arquivos simultaneamente da seguinte forma:
 
--> `rm arquivo1.txt arquivo2.txt arquivo3.txt` ou acaso os arquivos iniciem com o mesmo nome é possível apagá-los utilizando "*", que corresponde a qualquer sequência de caracteres no nome de arquivos ou diretórios, segue exemplo:
+-> `rm arquivo1.txt arquivo2.txt arquivo3.txt` ou os arquivos iniciem com o mesmo nome é possível apagá-los utilizando "*", que corresponde a qualquer sequência de caracteres no nome de arquivos ou diretórios, segue exemplo:
 
--> arquivos desejados para apagar -> arquivo{1..3}.txt -> utiliza-se dessa forma -> `rm arquivo*` assim será apagado todos os arquivos que tenham o mesmo inicio.
+-> arquivos desejados para apagar -> arquivo{1..3}.txt -> utiliza-se dessa forma -> `rm arquivo*` assim será apagado todos os arquivos que tenham o mesmo inicio. Mas é importante tomar cuidado, pois este comando irá apagar todos os arquivos que contenham o mesmo nome.
 
 ### `cat`
--**cat é um comando que pode ser utilizado para juntar arquivos e exibir o seu resultado, ou apenas mostrar o que há dentro de um arquivo em específico.**
+- **cat é um comando que pode ser utilizado para juntar arquivos e exibir o seu resultado, ou apenas mostrar o que há dentro de um arquivo em específico.**
 
-imagine que há um arquivo.txt, que em seu conteúdo está escrito "estudos-linux :D". E portanto deseja ver o que há dentro desse arquivo por meio do terminal. Então pode-se utilizar do comando cat para extrair o conteúdo dentro deste arquivo:
+imagine que há um arquivo.txt, que em seu conteúdo está escrito "estudos-linux :D". E deseja ver o que há dentro desse arquivo por meio do terminal. Então pode-se utilizar do comando cat para extrair o conteúdo dentro deste arquivo:
 
 -> `cat arquivo.txt` saída esperada no terminal -> `estudos-linux :D`
 
@@ -111,7 +111,7 @@ Além disso é possível juntá-lo com diversos arquivos simultaneamente desta f
 ## Permissões e Admin
 
 ### `sudo`
--**sudo é um comando que pode ser utilizado para executar comandos com privilégios administrativos**
+- **sudo é um comando que pode ser utilizado para executar comandos com privilégios administrativos**
 
 Útil para situações que exigem privilégios mais altos como para instalação de aplicativos ou até mesmo alterar arquivos do sistema.
 
@@ -123,7 +123,7 @@ Exemplo:
 ![SudoJS](./Imagens/ExemploSudo.png)
 
 ### `chmod`
--**Com o chmod(Change Mode), você pode alterar e revogar permissões de arquivos e diretórios no Linux. As permissões em si controlam o que cada tipo de usuário(dono, grupo e outros) podem fazer com determinado arquivo ou diretório, sendo ler, escrever ou executá-lo**
+- **Com o chmod(Change Mode), você pode alterar e revogar permissões de arquivos e diretórios no Linux. As permissões em si controlam o que cada tipo de usuário(dono, grupo e outros) podem fazer com determinado arquivo ou diretório, sendo ler, escrever ou executá-lo**
 
 No linux, cada arquivo ou diretório tem três tipos de permissões para as três categorias de usuário que são
 
@@ -145,9 +145,9 @@ x: Permissão para Executar(Execute)
 
 ![ExemploChmod](./Imagens/ExemploChmod.png)
 
-## O comando chmod pode ser utilizado de duas formas principais: usando a notação simbólica ou a notação númerica, vamos exemplificar os dois exemplos abaixo.
+- O comando chmod pode ser utilizado de duas formas principais: usando a notação simbólica ou a notação númerica, vamos exemplificar os dois exemplos abaixo.
 
-# 1. Notação Simbólica
+## 1. Notação Simbólica
 
 A notação simbólica utiliza das letras para representar as permissões:
 
@@ -163,7 +163,7 @@ Exemplo:
 
 ![ExemploChmod2](./Imagens/ExemploChmod2.png)
 
-# 2. Notação Numérica 
+## 2. Notação Numérica 
 
 Na notação númerica, cada permissão são representada por números
 
@@ -192,7 +192,7 @@ Como pode observar, utilizei o chown de forma errada para demonstrar que é nece
 
 ![Exemplochown2](./Imagens/Exemplochown2.png)
 
-Na imagem mostro como a alteração dos proprietários funciona, após ser definido que apenas o root pode fazer alterações na pasta, o user acaba tendo sua permissão negada a fazer alterações no arquivo, até mesmo porque sua permissão está definida apenas como `read`.
+Na imagem mostro como a alteração dos proprietários funciona, após ser definido que apenas o root pode fazer alterações na pasta, o user acaba tendo sua permissão negada quando tenta fazer alterações no arquivo, até mesmo porque sua permissão está definida apenas como `read`.
 
 É possível também singularmente alterar apenas o grupo, colocando um `:` antes do grupo.
 
