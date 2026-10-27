@@ -176,3 +176,25 @@ Na notação númerica, cada permissão são representada por números
 Exemplo:
 
 ![Exemplochmod3](./Imagens/ExemploChmod3.png)
+
+## chown
+-**chown -> change owner(Mudar dono) é exatamente como seu significado vem a dizer, com o chown podemos alterar o dono ou o grupo do arquivo ou diretório**
+
+- Sua sintaxe se dá por esse formato:
+
+`chown [opções] dono[:grupo] alvo`
+
+Exemplo abaixo:
+
+![Exemplochown1](./Imagens/Exemplochown1.png)
+
+Como pode observar, utilizei o chown de forma errada para demonstrar que é necessário utilizar esse comando em privilégios elevados, por isso devemos utilizar o sudo no ínicio de nosso comando!
+
+![Exemplochown2](./Imagens/Exemplochown2.png)
+
+Na imagem mostro como a alteração dos proprietários funciona, após ser definido que apenas o root pode fazer alterações na pasta, o user acaba tendo sua permissão negada a fazer alterações no arquivo, até mesmo porque sua permissão está definida apenas como `read`.
+
+É possível também singularmente alterar apenas o grupo, colocando um `:` antes do grupo.
+
+![Exemplochown3](./Imagens/Exemplochown3.png)
+
