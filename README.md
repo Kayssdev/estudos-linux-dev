@@ -10,7 +10,7 @@ Exemplo -> `pwd` -> resultado -> `/home/user/downloads`
 O comando pwd é útil para confirmar em qual pasta o usuário está antes de executar outros comandos.
 
 ### `ls -la`
-- **Este é uma extensão detalhada do comando padrão 'ls'**
+- **Esta é uma extensão detalhada do comando padrão 'ls'**
 
 O comando ls -la traz essas informações -> `/permissões/links/usuário/grupos/tamanho do arquivo/data e hora/nome do arquivo`
 
@@ -29,7 +29,7 @@ O usuário quer ir até a pasta downloads pode-se usar o comando ls para listar 
 
 Há também seus outros básicos meios de navegação quais são
 
-- cd .. <- sobe um nível para a pasta raiz -> após utilizá-lo De `/home/user/Downloads` vai para `/home/user`
+- cd .. <- sobe um nível para a pasta pai -> após utilizá-lo De `/home/user/Downloads` vai para `/home/user`
 
 - cd ~ <- vai para sua pasta pessoal (home) -> de qualquer lugar vai para `/home/user`
 
@@ -68,7 +68,7 @@ ou até mesmo de forma mais simples, estando no caminho da pasta desejada pode e
 -> `cp -r Documents ../Downloads`
 
 ### `mv`
-- **"mv" como propriamente o nome "move" diz, move arquivos e diretorios**
+- **"mv" como propriamente o nome "move" diz, move arquivos e diretórios**
 
 Seu formato é bem simples, da seguinte forma:
 
@@ -85,15 +85,15 @@ Basta apenas colocar a origem(arquivo ou diretório) e logo na frente o nome des
 `mv arquivo.txt aprendendo-linux.txt`
 
 ### `rm`
-- **rm significando remove, pode ser utilizado para remover arquivos, há também sua variante rmdir, anteriormente falamos sobre "dir" significando directory. Logo "rmdir" atua na exclusão de diretórios vázios**
+- **rm significando remove, pode ser utilizado para remover arquivos, há também sua variante rmdir, anteriormente falamos sobre "dir" significando directory. Logo "rmdir" atua na exclusão de diretórios vazios**
 
 formatos padrões -> `rm arquivo.txt`-> `rmdir diretorio`
 
 pode-se apagar também vários arquivos simultaneamente da seguinte forma:
 
--> `rm arquivo1.txt arquivo2.txt arquivo3.txt` ou os arquivos iniciem com o mesmo nome é possível apagá-los utilizando "*", que corresponde a qualquer sequência de caracteres no nome de arquivos ou diretórios, segue exemplo:
+-> `rm arquivo1.txt arquivo2.txt arquivo3.txt` ou caso os arquivos iniciem com o mesmo nome é possível apagá-los utilizando "*", que corresponde a qualquer sequência de caracteres no nome de arquivos ou diretórios, segue exemplo:
 
--> arquivos desejados para apagar -> arquivo{1..3}.txt -> utiliza-se dessa forma -> `rm arquivo*` assim será apagado todos os arquivos que tenham o mesmo inicio. Mas é importante tomar cuidado, pois este comando irá apagar todos os arquivos que contenham o mesmo nome.
+-> arquivos desejados para apagar -> arquivo{1..3}.txt -> utiliza-se dessa forma -> `rm arquivo*` assim serão apagado todos os arquivos que tenham o mesmo início. Mas é importante tomar cuidado, pois este comando irá apagar todos os arquivos que iniciem com mesmo nome.
 
 ### `cat`
 - **cat é um comando que pode ser utilizado para juntar arquivos e exibir o seu resultado, ou apenas mostrar o que há dentro de um arquivo em específico.**
@@ -145,7 +145,7 @@ x: Permissão para Executar(Execute)
 
 ![ExemploChmod](./Imagens/ExemploChmod.png)
 
-- O comando chmod pode ser utilizado de duas formas principais: usando a notação simbólica ou a notação númerica, vamos exemplificar os dois exemplos abaixo.
+- O comando chmod pode ser utilizado de duas formas principais: usando a notação simbólica ou a notação numérica, vamos exemplificar os dois exemplos abaixo.
 
 ## 1. Notação Simbólica
 
@@ -165,7 +165,7 @@ Exemplo:
 
 ## 2. Notação Numérica 
 
-Na notação númerica, cada permissão são representada por números
+Na notação numérica, cada permissão são representada por um número
 
 - r = 4
 
@@ -173,12 +173,14 @@ Na notação númerica, cada permissão são representada por números
 
 - x = 1
 
+4+2+1
+
 Exemplo:
 
 ![Exemplochmod3](./Imagens/ExemploChmod3.png)
 
-## chown
--**chown -> change owner(Mudar dono) é exatamente como seu significado vem a dizer, com o chown podemos alterar o dono ou o grupo do arquivo ou diretório**
+- ## `chown`
+**chown -> change owner(Mudar dono) é exatamente como seu significado vem a dizer, com o chown podemos alterar o dono ou o grupo do arquivo ou diretório**
 
 - Sua sintaxe se dá por esse formato:
 
