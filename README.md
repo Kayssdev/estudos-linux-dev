@@ -3,6 +3,7 @@
 ## Comandos de Navegação
 
 ### `pwd`
+
 - **O comando pwd pode ser utilizado para mostrar o caminho da pasta atual**
 
 Exemplo -> `pwd` -> resultado -> `/home/user/downloads`
@@ -10,6 +11,7 @@ Exemplo -> `pwd` -> resultado -> `/home/user/downloads`
 O comando pwd é útil para confirmar em qual pasta o usuário está antes de executar outros comandos.
 
 ### `ls -la`
+
 - **Esta é uma extensão detalhada do comando padrão 'ls'**
 
 O comando ls -la traz essas informações -> `/permissões/links/usuário/grupos/tamanho do arquivo/data e hora/nome do arquivo`
@@ -21,6 +23,7 @@ O "l" logo antes do "a" lista os arquivos ou pasta com detalhes mostrando suas p
 `drwxr-xr-x. 1 user user 442 oct 24 14:39 .config` <- Arquivo oculto definidos geralmente por "."
 
 ### `cd`
+
 - **cd é um comando básico de navegação entre pastas**
 
 Pode ser utilizado da seguinte forma conforme o exemplo a seguir:
@@ -40,6 +43,7 @@ Há também seus outros básicos meios de navegação quais são
 ![ExemploCd](./Imagens/ExemploCd.png)
 
 ### `mkdir`
+
 - **"make directory" ou como propriamente é sua abreviatura "mkdir" é um comando utilizado para a criação de diretórios ou pasta como preferir!**
 
 Exemplos de usos:
@@ -49,6 +53,7 @@ Pode-se criar pastas através de um caminho específico -> `mkdir /home/user/Doc
 O resultado será criação da pasta desejada, liste ela com o comando "ls" no terminal dentro da pasta ou diretório atual -> `ls` -> `estudos-linux`
 
 ### `cp`
+
 - **"Copy" ou cp, é o comando utilizado para copiar pastas e arquivos**
 
 Dado pelo seguinte formato
@@ -61,13 +66,14 @@ Exemplo:
 
 Para copiar diretórios completos utiliza-se de uma implementação no comando que seria o `-r` significando "recursivo" faz o cp entrar na pasta e copiar tudo que está dentro dela incluindo suas subpastas, exemplo:
 
--> `cp -r /home/user/Documents /home/user/Downloads` 
+-> `cp -r /home/user/Documents /home/user/Downloads`
 
 ou até mesmo de forma mais simples, estando no caminho da pasta desejada pode escrever o seguinte comando para copiar para o caminho desejado:
 
 -> `cp -r Documents ../Downloads`
 
 ### `mv`
+
 - **"mv" como propriamente o nome "move" diz, move arquivos e diretórios**
 
 Seu formato é bem simples, da seguinte forma:
@@ -85,6 +91,7 @@ Basta apenas colocar a origem(arquivo ou diretório) e logo na frente o nome des
 `mv arquivo.txt aprendendo-linux.txt`
 
 ### `rm`
+
 - **rm significando remove, pode ser utilizado para remover arquivos, há também sua variante rmdir, anteriormente falamos sobre "dir" significando directory. Logo "rmdir" atua na exclusão de diretórios vazios**
 
 formatos padrões -> `rm arquivo.txt`-> `rmdir diretorio`
@@ -96,6 +103,7 @@ pode-se apagar também vários arquivos simultaneamente da seguinte forma:
 -> arquivos desejados para apagar -> arquivo{1..3}.txt -> utiliza-se dessa forma -> `rm arquivo*` assim serão apagado todos os arquivos que tenham o mesmo início. Mas é importante tomar cuidado, pois este comando irá apagar todos os arquivos que iniciem com mesmo nome.
 
 ### `cat`
+
 - **cat é um comando que pode ser utilizado para juntar arquivos e exibir o seu resultado, ou apenas mostrar o que há dentro de um arquivo em específico.**
 
 imagine que há um arquivo.txt, que em seu conteúdo está escrito "estudos-linux :D". E deseja ver o que há dentro desse arquivo por meio do terminal. Então pode-se utilizar do comando cat para extrair o conteúdo dentro deste arquivo:
@@ -111,6 +119,7 @@ Além disso é possível juntá-lo com diversos arquivos simultaneamente desta f
 ## Permissões e Admin
 
 ### `sudo`
+
 - **sudo é um comando que pode ser utilizado para executar comandos com privilégios administrativos**
 
 Útil para situações que exigem privilégios mais altos como para instalação de aplicativos ou até mesmo alterar arquivos do sistema.
@@ -123,6 +132,7 @@ Exemplo:
 ![SudoJS](./Imagens/ExemploSudo.png)
 
 ### `chmod`
+
 - **Com o chmod(Change Mode), você pode alterar e revogar permissões de arquivos e diretórios no Linux. As permissões em si controlam o que cada tipo de usuário(dono, grupo e outros) podem fazer com determinado arquivo ou diretório, sendo ler, escrever ou executá-lo**
 
 No linux, cada arquivo ou diretório tem três tipos de permissões para as três categorias de usuário que são
@@ -163,7 +173,7 @@ Exemplo:
 
 ![ExemploChmod2](./Imagens/ExemploChmod2.png)
 
-## 2. Notação Numérica 
+## 2. Notação Numérica
 
 Na notação numérica, cada permissão são representada por um número
 
@@ -180,6 +190,7 @@ Exemplo:
 ![Exemplochmod3](./Imagens/ExemploChmod3.png)
 
 ### `chown`
+
 **chown -> change owner(Mudar dono) é exatamente como seu significado vem a dizer, com o chown podemos alterar o dono ou o grupo do arquivo ou diretório**
 
 - Sua sintaxe se dá por esse formato:
@@ -207,9 +218,9 @@ Na imagem mostro como a alteração dos proprietários funciona, após ser defin
 De forma simples o ps aux atua como um gerenciador de tarefas(como no windows) mostra os processos que estão em execução no momento de execução do comando. É um htop porém em versão congelada
 
 `ps` significa process status. O `aux` são três opções juntas que se completam:
+
 - `a`: processos de todos os usuários
 - `u`: formato detalhado (root, CPU e memória)
 - `x`: inclui processos sem terminal (serviços em segundo plano)
 
 Principais que podemos ver **USER** (dono), **PID** (número do processo), **%CPU**, **%MEM**, **COMMAND** (geralmente o programa).
-
