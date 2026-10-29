@@ -42,3 +42,60 @@ Criando um processo inofensivo podemos praticar o uso do kill
 ![ExemploPID](./Imagens/ExemploKill.png)
 
 ### `systemctl status`
+
+O systemctl é um dos principais comandos para gerenciar serviços, unidades e alvos do systemd.
+
+## O que é o systemd?
+- O systemd atua como o iniciador do sistema e também a infraestrutra dele. É o processo que inia logo após o kernel, ele é responsável por iniciar os serviços, montar o sistema de arquivos entre outras funções!
+
+Dentro do ecossistema systemd, o **systemctl** atua como um gerenciador das atividades tais como:
+
+- Iniciar, parar, reiniciar ou recarregar serviços.
+- Ativar ou desativar unidades para que eles inicializem com o sistema
+- Verificar o status dos serviços.
+
+Suas principais sintaxes seriam estas:
+
+## Ver o estado
+- `systemctl status nginx`
+
+![nginx](./Imagens/StatusNginx.png)
+
+## Ligar e Desligar
+- `systemctl start nginx`
+- `systemctl stop nginx`
+
+![OnNginx](./Imagens/OnNginx.png)
+
+## Reiniciar (Derruba a conexão)
+- `systemctl restart nginx`
+
+![alt text](./Imagens/Restartnginx.png)
+
+## Reler(Sem derrubar as conexões)
+- `systemctl reload nginx`
+
+![alt text](./Imagens/SystemctlReload.png)
+
+## Iniciar ou não no boot
+- `systemctl enable nginx`
+- `systemctl disable nginx`
+
+![alt text](./Imagens/SystemctlEnable.png)
+
+## Comandos rápidos com systemctl
+- `systemctl is-active nginx`
+- `systemctl is-enabled nginx`
+
+![alt text](./Imagens/systemctlIs.png)
+
+## Para ter uma visão geral
+- `systemctl list-units --type=service`
+
+![alt text](./Imagens/SystemctlList.png)
+
+- `systemctl --failed`
+
+![alt text](./Imagens/SystemctlFailed.png)
+
+Utilizei do serviço **nginx** como exemplo para o teste prático systemctl!
