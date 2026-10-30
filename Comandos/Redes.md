@@ -83,8 +83,6 @@ O comando whois consulta quem é o dono de um domínio ou de um bloco de IP.
 
 ## `dig`
 
-## `dig`
-
 O `dig` consulta servidores DNS e mostra quais registros existem para um
 nome, como o IP (A), os servidores de e-mail (MX) e os servidores de nome (NS).
 
