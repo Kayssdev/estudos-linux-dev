@@ -46,7 +46,7 @@ Criando um processo inofensivo podemos praticar o uso do kill
 O systemctl é um dos principais comandos para gerenciar serviços, unidades e alvos do systemd.
 
 ## O que é o systemd?
-- O systemd atua como o iniciador do sistema e também a infraestrutra dele. É o processo que inia logo após o kernel, ele é responsável por iniciar os serviços, montar o sistema de arquivos entre outras funções!
+- O systemd atua como o iniciador do sistema e também a infraestrutra dele. É o processo que inicia logo após o kernel, ele é responsável por iniciar os serviços, montar o sistema de arquivos entre outras funções!
 
 Dentro do ecossistema systemd, o **systemctl** atua como um gerenciador das atividades tais como:
 
