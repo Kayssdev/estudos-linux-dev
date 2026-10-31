@@ -11,7 +11,7 @@ De forma simples o ps aux atua como um gerenciador de tarefas(como no windows) m
 
 Principais que podemos ver **USER** (dono), **PID** (número do processo), **%CPU**, **%MEM**, **COMMAND** (geralmente o programa).
 
-![psaux](./Imagens/psaux.png)
+![psaux](./Imagens/Exemplopsaux.png)
 
 Podemos filtrar alguns processos específicos utilizando o grep, como no exemplo abaixo:
 
