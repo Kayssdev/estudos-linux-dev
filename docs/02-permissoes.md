@@ -61,6 +61,16 @@ Exemplo:
 
 ![Exemplochmod3](/assets/img/permissoes/exemplo-chmod3.png)
 
+### Referência rápida — permissões mais comuns
+
+| Valor | Representação | Uso típico |
+|---|---|---|
+| `777` | `rwxrwxrwx` | Todos podem tudo — evite, é inseguro |
+| `755` | `rwxr-xr-x` | Dono faz tudo; os demais só leem e executam. Padrão para pastas e scripts |
+| `644` | `rw-r--r--` | Dono lê e escreve; os demais só leem. Padrão para arquivos comuns |
+| `600` | `rw-------` | Apenas o dono lê e escreve. Obrigatório para chaves SSH privadas |
+| `700` | `rwx------` | Apenas o dono acessa. Usado para pastas `~/.ssh` |
+
 ### `chown`
 
 - **`chown` (change owner) altera o dono ou o grupo de um arquivo ou diretório.**
@@ -82,3 +92,17 @@ Após definir o `root` como único com permissão de escrita na pasta, o usuári
 Também é possível alterar apenas o grupo, colocando `:` antes do nome do grupo:
 
 ![Exemplochown3](/assets/img/permissoes/exemplo-chown3.png)
+
+### Dica — `sudo` com redirecionador `>`
+
+Um erro comum é tentar redirecionar a saída de um comando para um arquivo protegido usando `sudo`:
+
+```bash
+sudo echo "texto" > /etc/arquivo  # ❌ Permission denied
+```
+
+O problema é que o `sudo` eleva apenas o `echo`, mas o redirecionador `>` é executado pelo shell do usuário, sem privilégios. A solução é passar tudo para um subshell com `sudo`:
+
+```bash
+sudo sh -c "echo 'texto' > /etc/arquivo"  # ✅
+```

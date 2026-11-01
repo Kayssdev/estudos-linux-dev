@@ -8,7 +8,7 @@ Repositório onde documento meus estudos de Linux: comandos explicados, exemplos
 
 | Arquivo | Comandos abordados |
 |---|---|
-| [01 — Navegação](docs/01-navegacao.md) | `pwd`, `ls -la`, `cd`, `mkdir`, `cp`, `mv`, `rm`, `cat` |
+| [01 — Navegação](docs/01-navegacao.md) | `pwd`, `ls -la`, `cd`, `mkdir`, `cp`, `mv`, `rm`, `touch`, `cat`, `whoami`, `hostname`, `file` |
 | [02 — Permissões e Admin](docs/02-permissoes.md) | `sudo`, `chmod`, `chown` |
 | [03 — Processos](docs/03-processos.md) | `ps aux`, `htop`, `kill`, `systemctl` |
 | [04 — Redes](docs/04-redes.md) | `ping`, `curl`, `wget`, `ip a`, `telnet`, `whois`, `dig` |

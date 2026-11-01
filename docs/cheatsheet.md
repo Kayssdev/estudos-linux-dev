@@ -24,6 +24,10 @@ Referência rápida de todos os comandos documentados neste repositório.
 | `rm arquivo*` | Remove todos os arquivos com o mesmo prefixo |
 | `cat arquivo` | Exibe o conteúdo de um arquivo |
 | `cat arquivo{1..4}.txt` | Concatena e exibe múltiplos arquivos |
+| `whoami` | Exibe o nome do usuário atual |
+| `hostname` | Exibe o nome da máquina |
+| `touch arquivo` | Cria um arquivo vazio |
+| `file arquivo` | Identifica o tipo real de um arquivo |
 
 ---
 
@@ -47,6 +51,23 @@ Referência rápida de todos os comandos documentados neste repositório.
 | `2` | escrita (w) |
 | `1` | execução (x) |
 | `7` | todas (r+w+x) |
+
+**Permissões mais comuns:**
+
+| Valor | Representação | Uso típico |
+|---|---|---|
+| `777` | `rwxrwxrwx` | Todos podem tudo — evite, é inseguro |
+| `755` | `rwxr-xr-x` | Padrão para pastas e scripts |
+| `644` | `rw-r--r--` | Padrão para arquivos comuns |
+| `600` | `rw-------` | Obrigatório para chaves SSH privadas |
+| `700` | `rwx------` | Usado para a pasta `~/.ssh` |
+
+**Dica — `sudo` com redirecionador `>`:**
+
+```bash
+sudo echo "texto" > /etc/arquivo   # ❌ Permission denied
+sudo sh -c "echo 'texto' > /etc/arquivo"  # ✅
+```
 
 ---
 
@@ -88,3 +109,36 @@ Referência rápida de todos os comandos documentados neste repositório.
 | `dig dominio MX` | Retorna os servidores de e-mail |
 | `dig dominio NS` | Retorna os servidores de nome |
 | `dig -x ip` | DNS reverso: retorna o nome associado ao IP |
+
+---
+
+## SSH e Acessos Linux
+
+| Comando | O que faz |
+|---|---|
+| `ssh usuario@ip` | Conecta em uma máquina remota |
+| `ssh -p 2222 usuario@ip` | Conecta em uma porta diferente da padrão (22) |
+| `ssh-keygen -t ed25519 -C "email"` | Gera um par de chaves SSH |
+| `ssh-copy-id usuario@ip` | Copia a chave pública para o servidor |
+| `scp arquivo.txt host:~` | Envia um arquivo para o servidor |
+| `scp host:arquivo.txt .` | Baixa um arquivo do servidor para a pasta atual |
+| `ssh -L 8080:localhost:8000 host -N` | Cria um túnel SSH (port forwarding) |
+| `sudo sshd -t` | Testa a sintaxe do `sshd_config` antes de reiniciar |
+| `sudo systemctl restart ssh` | Reinicia o serviço SSH |
+| `ssh -o PubkeyAuthentication=no usuario@ip` | Testa login forçando senha (validar hardening) |
+
+**Permissões obrigatórias para o SSH funcionar:**
+
+| Caminho | Permissão |
+|---|---|
+| `~/.ssh/` | `700` |
+| `~/.ssh/authorized_keys` | `600` |
+| `~/.ssh/id_ed25519` (chave privada) | `600` |
+
+**Exemplo de `~/.ssh/config`:**
+
+```
+Host labvm
+    HostName 192.168.33.10
+    User vagrant
+```

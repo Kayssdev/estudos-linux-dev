@@ -99,6 +99,42 @@ Caso os arquivos compartilhem o mesmo início de nome, é possível usar `*`, qu
 
 > ⚠️ Tome cuidado: esse comando apagará todos os arquivos que iniciarem com o mesmo prefixo.
 
+### `whoami`
+
+- **`whoami` exibe o nome do usuário atual no terminal.**
+
+`whoami` → saída esperada: `vagrant`
+
+Útil para confirmar com qual usuário você está operando, especialmente após trocar de usuário com `su` ou acessar via SSH.
+
+### `hostname`
+
+- **`hostname` exibe o nome da máquina.**
+
+`hostname` → saída esperada: `ubuntu-server`
+
+Combinado com `whoami`, é o jeito rápido de confirmar em qual usuário e em qual máquina você está — muito útil ao trabalhar com SSH em múltiplos servidores.
+
+### `touch`
+
+- **`touch` cria um arquivo vazio ou atualiza a data de modificação de um arquivo existente.**
+
+`touch arquivo.txt` → cria o arquivo se não existir
+
+Para criar vários arquivos de uma vez:
+
+`touch arquivo1.txt arquivo2.txt arquivo3.txt`
+
+### `file`
+
+- **`file` identifica o tipo real de um arquivo, independente da extensão.**
+
+`file arquivo.txt` → saída esperada: `arquivo.txt: ASCII text`
+
+`file /bin/ls` → saída esperada: `/bin/ls: ELF 64-bit LSB pie executable...`
+
+Útil para identificar o que um arquivo realmente é quando a extensão não é confiável.
+
 ### `cat`
 
 - **`cat` pode ser utilizado para exibir o conteúdo de um arquivo ou para concatenar múltiplos arquivos.**
