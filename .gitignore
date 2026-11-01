@@ -1,0 +1,21 @@
+# Vagrant
+.vagrant/
+*.box
+
+# Logs
+*.log
+
+# Binários e instaladores
+*.exe
+*.iso
+*.ova
+*.vdi
+*.vmdk
+
+# Sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
