@@ -1,6 +1,6 @@
 # Estudos de Linux
 
-Repositório onde documento meus estudos de Linux: comandos explicados, exemplos testados no terminal e prints reais.
+Repositório onde documento meus estudos de Linux: comandos explicados, exemplos testados no terminal e print dos testes.
 
 > Comandos testados em **Fedora** e **Ubuntu 24.04**. Os comandos de instalação variam conforme a distro (`dnf` no Fedora, `apt` no Ubuntu).
 
