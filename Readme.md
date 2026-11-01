@@ -16,7 +16,7 @@ Repositório onde documento meus estudos de Linux: comandos explicados, exemplos
 
 ## Ambiente de laboratório
 
-Os exercícios práticos ficam em `labs/` e rodam numa VM Ubuntu 24.04 provisionada com Vagrant.
+A pasta `labs/` contém uma VM Ubuntu 24.04 provisionada com Vagrant, reservada para os exercícios práticos que serão adicionados futuramente.
 
 **Pré-requisitos:**
 - [VirtualBox](https://www.virtualbox.org/)
