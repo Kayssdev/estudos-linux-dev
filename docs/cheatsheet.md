@@ -108,7 +108,8 @@ sudo sh -c "echo 'texto' > /etc/arquivo"  # ✅
 | `dig +short dominio` | Retorna apenas o IP do domínio |
 | `dig dominio MX` | Retorna os servidores de e-mail |
 | `dig dominio NS` | Retorna os servidores de nome |
-| `dig -x ip` | DNS reverso: retorna o nome associado ao IP |
+| `sudo ss -tulpn` | Lista todas as portas abertas e os processos por trás delas |
+| `sudo ss -tulpn \| grep 22` | Filtra uma porta específica |
 
 ---
 

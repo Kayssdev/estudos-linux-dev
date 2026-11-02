@@ -77,6 +77,40 @@ O número ao final é a porta a ser testada.
 
 ![alt text](/assets/img/redes/exemplo-telnet.png)
 
+## `ss`
+
+O `ss` (Socket Statistics) mostra quais portas estão abertas na máquina e qual processo está por trás de cada uma. É o substituto moderno do `netstat`.
+
+```bash
+sudo ss -tulpn
+```
+
+O que cada flag faz:
+
+| Flag | Significado |
+|---|---|
+| `-t` | Mostra sockets TCP |
+| `-u` | Mostra sockets UDP |
+| `-l` | Apenas portas em estado listening (aguardando conexões) |
+| `-p` | Mostra o processo dono de cada porta (requer `sudo`) |
+| `-n` | Exibe números em vez de nomes (`:22` em vez de `:ssh`) |
+
+![ss](/assets/img/redes/exemplo-ss.png)
+
+Lendo a saída:
+
+- `0.0.0.0:22` + `sshd` → SSH escutando em **todas as interfaces** — acessível de fora da máquina
+- `127.0.0.1:53` + `systemd-resolve` → DNS local escutando **só no loopback** — não acessível de fora
+- `[::]:22` → mesma porta 22, mas para conexões **IPv6**
+
+A diferença entre `0.0.0.0` (aceita conexões de qualquer lugar) e `127.0.0.1` (apenas da própria máquina) é a informação mais importante da saída.
+
+Para filtrar uma porta específica:
+
+```bash
+sudo ss -tulpn | grep 22
+```
+
 ## `whois`
 
 O `whois` consulta o responsável por um domínio ou bloco de IP.
