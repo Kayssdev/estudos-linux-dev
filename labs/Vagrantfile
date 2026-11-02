@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
 
   # Portas — descomente para encaminhar uma porta do host para a VM:
   # config.vm.network "forwarded_port", guest: 80, host: 8080
-
+config.ssh.insert_key = false
   # Provisionamento — descomente para rodar comandos ao subir a VM:
   # config.vm.provision "shell", inline: <<-SHELL
   #   apt-get update

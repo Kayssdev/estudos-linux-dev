@@ -4,7 +4,7 @@
 
 O SSH (Secure Shell) é um protocolo que permite acessar o terminal de uma máquina remota de forma criptografada. Não é uma interface gráfica — é acesso direto à linha de comando de outro sistema.
 
-A porta padrão é a **22**.
+A porta padrão do SSH é a **22**.
 
 ## Conectar em uma máquina remota
 
@@ -68,37 +68,51 @@ Após instalar a chave, o `ssh` conecta direto sem pedir senha:
 
 ![ssh-conectando](/assets/img/ssh/exemplo-ssh-conectando.png)
 
-## Hardening — desativar login por senha
+## Hardening — blindagem do servidor SSH
 
-Após configurar as chaves, desative o login por senha para fechar a porta para ataques de força bruta.
+Após configurar as chaves, é hora de fechar as brechas de segurança no servidor. Todas as configurações ficam em `/etc/ssh/sshd_config`.
 
-Edite o arquivo `/etc/ssh/sshd_config`:
+### Diretivas recomendadas
+
+| Diretiva | Valor | Objetivo |
+|---|---|---|
+| `PermitRootLogin` | `no` | Impede login direto como root |
+| `PasswordAuthentication` | `no` | Desabilita login por senha, forçando o uso de chaves |
+| `MaxAuthTries` | `3` | Limita tentativas por conexão, mitigando força bruta |
+
+Edite o arquivo:
 
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
 
-Altere a linha:
+![sshd-config](/assets/img/ssh/exemplo-sshd-config.png)
 
-```
-PasswordAuthentication no
-```
+> ⚠️ **Atenção no Ubuntu:** o arquivo `/etc/ssh/sshd_config.d/50-cloud-init.conf` pode sobrescrever as configurações do `sshd_config`. Verifique e edite esse arquivo também se necessário.
 
-> ⚠️ **Atenção no Ubuntu:** o arquivo `/etc/ssh/sshd_config.d/50-cloud-init.conf` pode sobrescrever essa configuração. Verifique e altere esse arquivo também se necessário.
+> ⚠️ **Atenção com o `PermitRootLogin`:** o valor correto é apenas `no`. Colocar `PermitRootLogin no comentario` ou qualquer texto extra na mesma linha causa erro de sintaxe.
 
-Teste a sintaxe antes de reiniciar:
+### Validar e aplicar
+
+Sempre teste a sintaxe antes de reiniciar para evitar travar o acesso ao servidor:
 
 ```bash
 sudo sshd -t
 ```
 
-Reinicie o serviço:
+Se não retornar nenhum erro, aplique:
 
 ```bash
-sudo systemctl restart ssh
+sudo systemctl reload ssh
 ```
 
-Para confirmar que o login por senha foi bloqueado:
+> ℹ️ Use `reload` em vez de `restart` para aplicar as configurações sem derrubar as conexões ativas. O `systemctl restart sshd` pode falhar no Ubuntu — o serviço correto é `ssh`, não `sshd`.
+
+O print abaixo mostra o processo completo: edição, validação com `sshd -t`, a pegadinha do argumento extra no `PermitRootLogin` e o `reload` final:
+
+![hardening-processo](/assets/img/ssh/exemplo-hardening-processo.png)
+
+### Confirmar que o login por senha foi bloqueado
 
 ```bash
 ssh -o PubkeyAuthentication=no usuario@ip
@@ -106,6 +120,7 @@ ssh -o PubkeyAuthentication=no usuario@ip
 ```
 
 ![hardening](/assets/img/ssh/exemplo-hardening.png)
+
 
 ## Configurar atalhos de conexão
 
