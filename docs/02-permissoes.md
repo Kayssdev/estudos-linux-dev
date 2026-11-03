@@ -106,3 +106,4 @@ O problema é que o `sudo` eleva apenas o `echo`, mas o redirecionador `>` é ex
 ```bash
 sudo sh -c "echo 'texto' > /etc/arquivo"  # ✅
 ```
+### Criação de Usuários com

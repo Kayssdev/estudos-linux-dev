@@ -30,7 +30,7 @@ A autenticação por senha é vulnerável a ataques de força bruta. O método r
 Gera o par de chaves:
 
 ```bash
-ssh-keygen -t ed25519 -C "seu-email@exemplo.com"
+ssh-keygen -t ed25519 -C "nome" <- atribuir é opcional
 ```
 
 As chaves são salvas em `~/.ssh/`:
