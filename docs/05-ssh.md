@@ -43,7 +43,7 @@ No Windows, use `type` para ver o conteúdo da chave pública antes de copiá-la
 type .\id_ed25519.pub
 ```
 
-![chaves-ssh](/assets/img/ssh/exemplo-chaves-ssh.png)
+![chaves-ssh](/assets/img/ssh/exemplo-chaves-ssh.jpeg)
 
 ### Instalar a chave pública no servidor
 
